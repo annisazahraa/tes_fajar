@@ -8,3 +8,4 @@ imbalanced-learn==0.13.0
 joblib==1.5.1
 cloudpickle
 matplotlib==3.10.0
+seaborn
