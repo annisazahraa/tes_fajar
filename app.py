@@ -9,7 +9,7 @@ import joblib
 import cloudpickle
 
 # -- Tambahkan semua import yang dipakai di pipeline Anda --
-from sklearn.compose._column_transformer import _RemainderColsList
+
 from sklearn.ensemble import RandomForestClassifier
 from xgboost import XGBClassifier
 from sklearn.linear_model import LogisticRegression
@@ -19,6 +19,46 @@ from sklearn.pipeline import Pipeline
 # Jika Anda menggunakan imbalanced-learn di pipeline:
 from imblearn.over_sampling import SMOTEN
 from imblearn.pipeline import Pipeline as ImbPipeline
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
+from xgboost import XGBClassifier
+from sklearn.metrics import (
+    accuracy_score, precision_score, recall_score,
+    f1_score, roc_auc_score, classification_report,
+    confusion_matrix
+)
+import joblib  # for saving models/transformers
+
+from imblearn.over_sampling import SMOTEN
+from imblearn.pipeline import Pipeline as ImbPipeline
+
+import numpy as np
+import pandas as pd
+import joblib
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
+from xgboost import XGBClassifier
+from sklearn.metrics import (
+    accuracy_score, precision_score, recall_score,
+    f1_score, classification_report, confusion_matrix
+)
 
 st.set_page_config(page_title="Student Performance Predictor", layout="centered")
 st.title("🎓 Student Performance Prediction")
