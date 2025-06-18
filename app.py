@@ -9,6 +9,7 @@ import joblib
 import cloudpickle
 
 # -- Tambahkan semua import yang dipakai di pipeline Anda --
+from sklearn.compose._column_transformer import _RemainderColsList
 from sklearn.ensemble import RandomForestClassifier
 from xgboost import XGBClassifier
 from sklearn.linear_model import LogisticRegression
