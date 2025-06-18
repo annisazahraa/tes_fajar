@@ -3,6 +3,21 @@ import streamlit as st
 import pandas as pd
 import joblib
 
+import streamlit as st
+import pandas as pd
+import joblib
+
+# -- Tambahkan semua import yang dipakai di pipeline Anda --
+from sklearn.ensemble import RandomForestClassifier
+from xgboost import XGBClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+# Jika Anda menggunakan imbalanced-learn di pipeline:
+from imblearn.over_sampling import SMOTEN
+from imblearn.pipeline import Pipeline as ImbPipeline
+
 st.set_page_config(page_title="Student Performance Predictor", layout="centered")
 st.title("🎓 Student Performance Prediction")
 
