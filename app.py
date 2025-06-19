@@ -66,11 +66,11 @@ st.title("🎓 Student Performance Prediction")
 # 1. Load pipeline (preprocessor + model)
 #    Pastikan kedua file ini berada di direktori yang sama dengan app.py
 
-st.sidebar.info("Loading model…")
-with open("student_pipeline.pkl", "rb") as f:
-    pipeline = cloudpickle.load(f)
+#st.sidebar.info("Loading model…")
+#with open("student_pipeline.pkl", "rb") as f:
+#    pipeline = cloudpickle.load(f)
     
-#pipeline = joblib.load("rf_pipeline.joblib")  
+pipeline = joblib.load("rf_pipeline.joblib")  
 
 # 2. Sidebar inputs untuk setiap fitur
 st.sidebar.header("Input Student Features")
